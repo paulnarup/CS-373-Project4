@@ -7,6 +7,7 @@ public class Building implements Facility {
     String name;
     int builidingNum;
     int numFloors;
+    Compound compound;
 
     public Building(){
 
@@ -39,5 +40,17 @@ public class Building implements Facility {
 
     public void setNumFloors(int numFloors) {
         this.numFloors = numFloors;
+    }
+
+    public Compound getCompound() {
+        return compound;
+    }
+
+    public void setCompound(Compound compound) {
+        this.compound = compound;
+    }
+
+    public void addBuildingToCompound(Building building){
+        compound.addBuilding(building);
     }
 }
